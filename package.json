@@ -1,0 +1,22 @@
+{
+  "name": "whatsapp-bulk-message-sender",
+  "version": "1.0.0",
+  "description": "An application that allows to send whatsapp message to multiple receipents",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "puppeteer",
+    "whastapp-sdk"
+  ],
+  "author": "muthaiyanmani",
+  "license": "ISC",
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.26.0"
+  }
+}
