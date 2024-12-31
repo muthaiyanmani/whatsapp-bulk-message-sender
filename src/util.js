@@ -17,13 +17,16 @@ const getContacts = async () => {
 };
 
 const getMessageTemplate = (contact) => {
-    return `Hi ${contact?.name}!
-    
-    This year is going to end in a day, What do you want to change a character from me and what do you like a character from.
+    return `Hi ${contact?.name},
 
-    Advance happy new year 2025.
-    `
+Can you believe this year is ending in just one day? Time really flew by! 
+As we look ahead to the new year, I’d love to hear your thoughts - what qualities or habits do you think I should work on changing, and what have you liked or appreciated about me this year?
+
+*Wishing you an advance Happy New Year 2025 filled with joy, growth, and new beginnings! 🎉*
+ `
 }
+
+
 
 const logger = (message) => console.log(`[ ${new Date().toLocaleTimeString()} ] :: ${message}`);
 
@@ -38,10 +41,11 @@ const getRecipientNumber = (mobileNo='') => {
     return `${mobileNo}@c.us`;
 }
 
-const sleep = (timeInSec) => {
+const sleep = (timeInSec, minTimeoutSec = 1) => {
     return new Promise(resolve => {
-      const randomDelay = Math.random() * timeInSec * 1000;
-      setTimeout(resolve, randomDelay);
+        const randomDelay = Math.random() * timeInSec * 1000;
+        const finalDelay = Math.max(randomDelay, minTimeoutSec * 1000);
+        setTimeout(resolve, finalDelay);
     });
 };
 

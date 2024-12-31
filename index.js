@@ -23,7 +23,7 @@ client.once('ready', async () => {
         await client.sendMessage(toAddress, messageTemplate);
         logger(`Messent sent to ${contact.name}`);
 
-        await sleep(3);
+        await sleep(4);
     }  
 });
 
